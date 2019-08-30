@@ -22,5 +22,10 @@ pipeline {
                 jacoco()
             }
         }
+        stage('Archive') {
+            steps {
+                archive 'my-app-1.0-SNAPSHOT.jar'
+            }
+        }
     }
 }
