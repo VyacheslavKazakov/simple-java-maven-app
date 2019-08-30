@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 tool name: 'mvn', type: 'maven'
-                sh 'mvn verify'
+                sh 'tools/hudson.tasks.Maven_MavenInstallation/mvn/bin/mvn verify'
             }
         }
         stage('Reports') {
