@@ -9,6 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 tool name: 'mvn', type: 'maven'
+                sh 'mvn verify'
             }
         }
         stage('Reports') {
