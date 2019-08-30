@@ -2,7 +2,9 @@ pipeline {
     agent any
     stages {
         stage('Prepare') {
-            git 'https://github.com/VyacheslavKazakov/simple-java-maven-app.git'
+            steps {
+                git 'https://github.com/VyacheslavKazakov/simple-java-maven-app.git'
+            }
         }
         stage('Build') {
             steps {
